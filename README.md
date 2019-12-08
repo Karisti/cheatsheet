@@ -8,6 +8,7 @@
 - [Terminal & Command line](terminal/README.md)
 - [Git & GitHub](github/README.md)
 - [SSH](ssh/README.md)
+- [Network](network/README.md)
 
 
 ## Backend
