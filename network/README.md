@@ -37,10 +37,11 @@ A netmask is a **32-bit binary mask used to divide an IP address into subnets** 
 In a netmask, two of the possible addresses, represented as the final byte, are always pre-assigned and unavailable for custom assignment. For example, in 255.255.225.0, "0" is the assigned network address. In 255.255.255.255, the final "255" is the assigned broadcast address. These two values cannot be used for IP address assignment.
 
 A simple formula can be used to determine the capable **amount of networks a netmask can support**:
-`2^(netmask length - # of used segments) - 2`
+> 2^(netmask length - # of used segments) - 2
 
 To determine the **number of hosts a netmask is capable of supporting**, use the following formula:
-`2^(# of zeroes) - 2`
+> 2^(# of zeroes) - 2
+
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
