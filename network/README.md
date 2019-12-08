@@ -25,7 +25,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -33,7 +33,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -41,7 +41,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -49,7 +49,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -57,7 +57,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -65,7 +65,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -73,7 +73,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -81,7 +81,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -89,7 +89,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -97,7 +97,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -105,7 +105,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -113,7 +113,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -121,7 +121,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -129,7 +129,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -137,7 +137,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -145,7 +145,7 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
@@ -153,5 +153,5 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 <div align="right">
-  <small><a href="#network">🡡 Vuelta al Index</a></small>
+  <small><a href="#network">⬆ Go to Index</a></small>
 </div>
