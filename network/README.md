@@ -22,7 +22,9 @@ to an other device](#what-is-a-port-from-an-ip-point-of-view-and-what-is-it-used
 
 
 ## What is an IP address
-An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing.
+An **Internet Protocol** address (IP address) is a **numerical label assigned to each device connected to a computer network** that uses the Internet Protocol for communication.
+
+An IP address serves two main functions: host or network interface identification and location addressing.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -30,15 +32,15 @@ An Internet Protocol address (IP address) is a numerical label assigned to each 
 
 
 ## What is a Netmask
-A netmask is a 32-bit binary mask used to divide an IP address into subnets and specify the network's available hosts.
+A netmask is a **32-bit binary mask used to divide an IP address into subnets** and specify the network's available hosts.
 
 In a netmask, two of the possible addresses, represented as the final byte, are always pre-assigned and unavailable for custom assignment. For example, in 255.255.225.0, "0" is the assigned network address. In 255.255.255.255, the final "255" is the assigned broadcast address. These two values cannot be used for IP address assignment.
 
-A simple formula can be used to determine the capable amount of networks a netmask can support.
-2^(netmask length - # of used segments) - 2
+A simple formula can be used to determine the capable **amount of networks a netmask can support**:
+`2^(netmask length - # of used segments) - 2`
 
-To determine the number of hosts a netmask is capable of supporting, use the following formula.
-2^(# of zeroes) - 2
+To determine the **number of hosts a netmask is capable of supporting**, use the following formula:
+`2^(# of zeroes) - 2`
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
