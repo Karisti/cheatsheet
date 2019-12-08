@@ -1,7 +1,7 @@
 # Network<!-- omit in toc -->
 
 ## Index<!-- omit in toc -->
-- [What is an IP address](#comandos-básicos)
+- [What is an IP address](#What is a Netmask)
 - [What is a Netmask](#comandos-básicos)
 - [What is the subnet of an IP with Netmask](#comandos-básicos)
 - [What is the broadcast address of a subnet](#comandos-básicos)
