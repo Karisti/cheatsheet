@@ -48,8 +48,9 @@ To determine the **number of hosts a netmask is capable of supporting**, use the
 
 
 ## What is the subnet of an IP with Netmask
+A subnetwork or **subnet is a logical subdivision of an IP network**. The practice of dividing a network into two or more networks is called subnetting.
 
-
+For IPv4, a network may also be characterized by its subnet mask or netmask, which is the bitmask that when applied by a bitwise AND operation to any IP address in the network, yields the routing prefix. Subnet masks are also expressed in dot-decimal notation like an address. For example, 255.255.255.0 is the subnet mask for the prefix 198.51.100.0/24.
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
