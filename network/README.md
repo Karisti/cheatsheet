@@ -135,7 +135,9 @@ The OSI model can be seen as a universal language for computer networking. It’
 
 
 ## What is a DHCP server and the DHCP protocol
+**A DHCP Server is a network server that automatically provides and assigns IP addresses, default gateways and other network parameters to client devices**. It **relies on the standard protocol known as Dynamic Host Configuration Protocol or DHCP to respond to broadcast queries by clients**.
 
+A DHCP server automatically sends the required network parameters for clients to properly communicate on the network. Without it, the network administrator has to manually set up every client that joins the network, which can be cumbersome, especially in large networks. DHCP servers usually assign each client with a unique dynamic IP address, which changes when the client’s lease for that IP address has expired.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -143,7 +145,7 @@ The OSI model can be seen as a universal language for computer networking. It’
 
 
 ## What is a DNS server and the DNS protocol
-
+The Domain Name System (DNS) is a **hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network**. It associates various information with domain names assigned to each of the participating entities. Most prominently, **it translates more readily memorized domain names to the numerical IP addresses** needed for locating and identifying computer services and devices with the underlying network protocols.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -151,7 +153,7 @@ The OSI model can be seen as a universal language for computer networking. It’
 
 
 ## What are the rules to make 2 devices communicate using IP addresses
-
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/internet.png)
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
