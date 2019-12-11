@@ -149,15 +149,19 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## How routing is working with IP
-
-
+**IP Routing describes the process of determining the path for data to follow in order to navigate from one computer or server to another**. A packet of data traverses from its source router through a web of routers across many networks until it finally reaches its destination router using a routing algorithm. The **routing algorithm takes into account factors such as the size of a packet and its header to determine the most efficient route** to the destination. When a packet has reached a router, **the source and destination address of the packet are used in conjunction with a routing table** (list that contains the routes to a certain network) to determine the next hop address. **This process is repeated** for the next router using its own routing table until the packet has reached its destination. Because the data is divided into packets, each packet travels independently from each other and is treated as such. As a result, **each packet can be sent through a different route to the destination** if necessary.
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_5.png)
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
 
 
 ## What is a default gateway for routing
+A gateway is a **network node that serves as an access point to another network**, often involving not only a change of addressing, but also a different networking technology. More narrowly defined, a router merely forwards packets between networks with different network prefixes. The networking software stack of each computer contains a routing table that specifies which interface is used for transmission and which router on the network is responsible for forwarding to a specific set of addresses. **If none of these forwarding rules is appropriate for a given destination address, the default gateway is chosen as the router of last resort**. The default gateway can be specified by the route command to configure the node's routing table and default route.
 
+In a home or small office environment, the default gateway is a device, such as a DSL router or cable router, that connects the local network to the Internet. It serves as the default gateway for all network devices.
+
+Enterprise network systems may require many internal network segments. A device wishing to communicate with a host on the public Internet, for example, forwards the packet to the default gateway for its network segment. This router also has a default route configured to a device on an adjacent network, one hop closer to the public network.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
