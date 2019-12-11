@@ -85,7 +85,7 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## What is a class of IP address
-
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_1.png)
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
