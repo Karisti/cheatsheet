@@ -93,7 +93,7 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## What is TCP
-
+The Transmission Control Protocol (TCP) is **one of the main protocols** of the Internet protocol suite. It originated in the initial network implementation in which **it complemented the Internet Protocol (IP)**. Therefore, the entire suite is commonly referred to as TCP/IP. TCP **provides reliable, ordered, and error-checked delivery of a stream of octets (bytes)** between applications running on hosts communicating via an IP network.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -101,7 +101,9 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## What is UDP
+In computer networking, the User Datagram Protocol (UDP) is one of the core members of the Internet protocol suite.
 
+UDP is suitable for purposes where error checking and correction are either not necessary or are performed in the application; UDP avoids the overhead of such processing in the protocol stack. Time-sensitive applications often use UDP because dropping packets is preferable to waiting for packets delayed due to retransmission, which may not be an option in a real-time system.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -109,7 +111,14 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## What are the network layers
+The network layer is **responsible for packet forwarding including routing through intermediate routers**.
 
+The network layer provides the means of transferring variable-length network packets from a source to a destination host via one or more networks. Within the service layering semantics of the OSI network architecture, the **network layer responds to service requests from the transport layer and issues service requests to the data link layer**.
+
+**Functions of the network layer include:**
+- **Connectionless communication**
+- **Host addressing**
+- **Message forwarding**
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
