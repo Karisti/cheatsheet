@@ -56,9 +56,9 @@ To determine the **number of hosts a netmask is capable of supporting**, use the
 
 
 ## What is the broadcast address of a subnet
-Broadcasting in a computer network is transmitting a message which does not require a response to all users of the network.One computer in a network sends a data packet to all other users at the same time. The sender does not need to indicate recipient addresses – this is how the broadcast process differs from unicast, where only a single known recipient is addressed. The general advantage of broadcasting is that information can be distributed without having to be transmitted multiple times.
+A special address that **replaces the recipient addresses** in question.
 
-A special address is required to carry out the procedure, which replaces the recipient addresses in question.
+Broadcasting in a computer network is transmitting a message which does not require a response to all users of the network.One computer in a network sends a data packet to all other users at the same time. The sender does not need to indicate recipient addresses – this is how the broadcast process differs from unicast, where only a single known recipient is addressed. The general advantage of broadcasting is that information can be distributed without having to be transmitted multiple times.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -74,9 +74,9 @@ A special address is required to carry out the procedure, which replaces the rec
 
 
 ## What are the difference between public and private IPs
-A public IP address is the address that is assigned to a computing device to allow direct access over the Internet.
+A **public IP address** is the address that is assigned to a computing device **to allow direct access over the Internet**.
 
-A private IP address is the address space allocated by InterNIC to allow organizations to create their own private network.
+A **private IP address** is the address space allocated **to allow organizations to create their own private network**.
 
 ![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_2.png)
 <div align="right">
