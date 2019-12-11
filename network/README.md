@@ -126,7 +126,8 @@ The network layer provides the means of transferring variable-length network pac
 
 
 ## What is the OSI model
-
+The OSI model can be seen as a universal language for computer networking. It’s based on the concept of splitting up a communication system into seven abstract layers, each one stacked upon the last.
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_3.png)
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -160,6 +161,7 @@ The network layer provides the means of transferring variable-length network pac
 ## How routing is working with IP
 **IP Routing describes the process of determining the path for data to follow in order to navigate from one computer or server to another**. A packet of data traverses from its source router through a web of routers across many networks until it finally reaches its destination router using a routing algorithm. The **routing algorithm takes into account factors such as the size of a packet and its header to determine the most efficient route** to the destination. When a packet has reached a router, **the source and destination address of the packet are used in conjunction with a routing table** (list that contains the routes to a certain network) to determine the next hop address. **This process is repeated** for the next router using its own routing table until the packet has reached its destination. Because the data is divided into packets, each packet travels independently from each other and is treated as such. As a result, **each packet can be sent through a different route to the destination** if necessary.
 ![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_5.png)
+
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
