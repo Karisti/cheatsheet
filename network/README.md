@@ -67,7 +67,7 @@ Broadcasting in a computer network is transmitting a message which does not requ
 
 
 ## What are the different way to represent an ip address with the Netmask
-
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_4.png)
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
@@ -80,6 +80,7 @@ A **public IP address** is the address that is assigned to a computing device **
 A **private IP address** is the address space allocated **to allow organizations to create their own private network**.
 
 ![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/Screenshot_2.png)
+
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
 </div>
