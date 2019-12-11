@@ -165,7 +165,11 @@ A **private IP address** is the address space allocated **to allow organizations
 
 
 ## What is a port from an IP point of view and what is it used for when connecting to an other device
+In computer networking, a port is a communication endpoint. Physical as well as wireless connections are terminated at ports of hardware devices. At the software level, within an operating system, a port is a **logical construct that identifies a specific process or a type of network service**. **Ports are identified for each protocol** and address combination by 16-bit unsigned numbers, commonly known as the **port number**. The **most common protocols that use port numbers are** the Transmission Control Protocol (**TCP**) and the User Datagram Protocol (**UDP**).
 
+**A port number is always associated with an IP address of a host and the protocol type of the communication**. It completes the destination or origination network address of a message. Specific port numbers are commonly reserved to identify specific services, so that an arriving packet can be easily forwarded to a running application. For this purpose, **the lowest numbered 1024 port numbers identify the historically most commonly used services**, and are called the **well-known port numbers**. Higher-numbered ports are available for general use by applications and are known as ephemeral ports.
+
+When used as a service enumeration, ports provide a multiplexing service for multiple services or multiple communication sessions at one network address. In the client–server model of application architecture multiple simultaneous communication sessions may be initiated for the same service.
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
