@@ -153,7 +153,7 @@ The Domain Name System (DNS) is a **hierarchical and decentralized naming system
 
 
 ## What are the rules to make 2 devices communicate using IP addresses
-![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/internet.png)
+![alt text](https://github.com/Karisti/cheatsheet/blob/master/network/internet.jpg)
 
 <div align="right">
   <small><a href="#network">⬆ Go to Index</a></small>
