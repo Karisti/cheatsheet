@@ -75,3 +75,31 @@ We can specify how we want to be our image in this Dockerfile.
 - `CMD ["<COMMAND>", "<COMMAND>"]` default command that will run if it is not specified.
 
 ### Docker compose
+Describe declaratively the structure of our application. It uses compose files in yml format. It creates a default network for all the services.
+
+`docker-compose up` to run.
+`docker-compose down` to clean.
+
+docker-compose.yml example:
+```
+version:"3"
+
+services:
+<ONE_NAME>:
+  	image: <IMAGE_NAME>
+	environment:
+		<NAME>:<ENV_VARIABLE>
+	depends_on:
+		- <DEPENDENCY_NAME>
+	ports:
+		- "<HOST_PORT>:<CONTAINER_PORT>
+	
+<DEPENDENCY_NAME>:
+    image: <IMAGE_NAME>
+```
+#### Docker compose commands
+Are similar to the other docker commands:
+- `docker-compose up -d`
+- `docker-compose ps`
+- `docker-compose logs <SERVICE_NAME>`
+- `docker-compose exec <SERVICE_NAME> <COMMAND>`
