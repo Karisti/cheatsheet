@@ -14,9 +14,13 @@ Un contenedor ejecuta sus procesos de forma nativa, como si fuera cualquier otro
 - `docker run <IMAGE_NAME>` ejecuta un contenedor.
 	- `docker run -it <IMAGE_NAME>` interactive with my shell.
 	- `docker run --mount src=<NAME_VOLUME> dst=</PATH/TO/DEST> <IMAGE_NAME>` interactive with my shell.
+	- `-p 8080:80` (publish) bound hosts port '8080' to containers port '80'.
 	- `docker run -d <IMAGE_NAME>` (detach) if this has output, don´t show me.
 	- `docker run <IMAGE_NAME> tail -f /dev/null` it execute the comand that we want, instead of default one. In this case tail -f "/dev/null" to get a infinite loop.
 	- `docker run --name <CONTAINER_NAME> <IMAGE_NAME>` corremos IMAGE_NAME con el nombre CONTAINER_NAME en vez de un nombre al azar.
+	- `-env <NAME>=<ENVIROMENT_VARIABLE>` assign environment variable.
+	- `docker run --rm <IMAGE_NAME>` deletes container when this ends.
+	
 - `docker ps` only shows running containers by default.
 	- `docker ps -a` shows all containers.
 	- `docker ps -aq` shows quiet containers.
@@ -25,14 +29,16 @@ Un contenedor ejecuta sus procesos de forma nativa, como si fuera cualquier otro
 - `docker rm <CONTAINER_NAME>` to remove container.
 	- `docker rm $(docker ps -aq)` and we remove quiet containers.
 - `docker logs <CONTAINER_NAME>` to see the output of a container, even if this one is stopped.
-
 - `docker rename <CONTAINER_NAME> <NEW_NAME>` cambiar nombre a un contenedor.
 - `docker inspect <CONTAINER_ID or CONTAINER_NAME>` metadata sobre el estado del contenedor.
 - `docker inspect -f '{{ json .Config.Env }}' <CONTAINER_ID or CONTAINER_NAME>` filtramos el resultado de inspect para obtener un valor concreto. En este caso el path del contenedor.
 
 ### Networking
-By default each container lives isolated, so if we want to see an nginx server for example, we need 'publish' these ports to work.
-- `-p 8080:80` (publish) bound hosts port '8080' to containers port '80'.
+Three types of networks by default: bridge, host, none.
+- `docker network ls` list networks.
+- `docker network create --attachable <NETWORK_NAME>` list networks. Attachable: we allow other containers connection on the future.
+- `docker network connect <NETWORK_NAME> <CONTAINER_NAME>` connects container to given network.
+- `docker network inspect <NETWORK_NAME>` all the information about the network.
 
 ### Data
 Each container with the original image (from 0) when we run it, so if we need data persistence, we have to manage it. We need to mount directory we want from the host on the desired directory of the container.
@@ -55,8 +61,17 @@ Images in Docker are built with layers. Each layer is one 'difference' with the 
 - `docker build -t <TAG_NAME> <PATH>` to build image from Dockerfile. We indicate the tag with -t. The Docker daemon can use the files only from PATH on build time.
 - `docker tag <PREVIOUS_TAG> <MY_USER>/<NEW TAG>` to rename image tag, so we can push to our Docker repository.
 - `docker push <IMAGE_NAME>` or `docker push <IMAGE_NAME>:<VERSION>` to push image from to Docker repository.
+- `docker history <IMAGE_NAME>` to see how image was created.
+	- `-- no-trunc` to avoid truncating output.
+- `dive <IMAGE_NAME>` we can use Dive to see history better (https://github.com/wagoodman/dive).
 
 ### Dockerfile
 We can specify how we want to be our image in this Dockerfile.
 - `FROM <BASE_IMAGE>:<VERSION>` we indicate which base image to use.
 - `RUN <COMMAND TO EXECUTE>` to execute commands when building the image.
+- `COPY ["<BUILD_CONTEXT_PATH>", "<DEST_PATH>"]` to copy files from the build context to a dest on the image.
+- `WORKDIR <DIRECTORY>` change working directory.
+- `EXPOSE <PORT>` to expose port.
+- `CMD ["<COMMAND>", "<COMMAND>"]` default command that will run if it is not specified.
+
+### Docker compose
