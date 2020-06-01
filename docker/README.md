@@ -36,16 +36,16 @@ By default each container lives isolated, so if we want to see an nginx server f
 
 ### Data
 Each container with the original image (from 0) when we run it, so if we need data persistence, we have to manage it. We need to mount directory we want from the host on the desired directory of the container.
-##### Bind mount
+#### Bind mount
 - `-v /Host/directory:Container/directory` makes data persistence between indicated host directory and the directory inside the container. Changes from one side are reflected in the other, so it can be insecure, as external processes can have access.
 
-##### Volume
+#### Volume
 Stored place is managed by Docker, so external processes should not have access to this. Containers can create volumens by default.
 - `docker volume create <NAME_VOLUME>` creates a volume. We can use it when running, with --mount.
 - `docker volume ls` list volumes.
 - `docker volume prume` deletes volumes that are not being used by some container.
 
-##### tmpfs mount
+#### tmpfs mount
 Temporal file system. It works on memory, so when it stops its deleted. Very useful for security.
 
 ### Images
