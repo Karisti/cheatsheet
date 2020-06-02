@@ -103,3 +103,7 @@ Are similar to the other docker commands:
 - `docker-compose ps`
 - `docker-compose logs <SERVICE_NAME>`
 - `docker-compose exec <SERVICE_NAME> <COMMAND>`
+
+## See also
+- [Docker Hub](https://hub.docker.com/)
+- [Docker For The Absolute Beginner](https://www.kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
