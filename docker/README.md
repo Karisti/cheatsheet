@@ -8,10 +8,10 @@
 `docker run hello-world`
 
 ### Containers
-Un contenedor ejecuta sus procesos de forma nativa, como si fuera cualquier otro proceso de la maquina host, pero no puede ver los procesos de fuera del contenedor. De la misma forma, solo puede acceder a los recursos que se le han asignado, no sabrán si el host tiene más recursos. En cuanto al sistema de archivos, solamente puede ver a partir de su root, no más arriba.
+A container runs its processes natively, just like any other process on the host machine, but cannot see processes outside the container. In the same way, you can only access the resources that have been assigned to you, it will not know if the host has more resources. For the file system, you can only see from its root, not above.
 
 ### Basic commands
-- `docker run <IMAGE_NAME>` ejecuta un contenedor.
+- `docker run <IMAGE_NAME>` runs container.
 	- `docker run -it <IMAGE_NAME>` interactive with my shell.
 	- `docker run --mount src=<NAME_VOLUME> dst=</PATH/TO/DEST> <IMAGE_NAME>` interactive with my shell.
 	- `-p 8080:80` (publish) bound hosts port '8080' to containers port '80'.
@@ -79,6 +79,7 @@ Describe declaratively the structure of our application. It uses compose files i
 
 `docker-compose up` to run.
 `docker-compose down` to clean.
+`docker-compose scale <SERVICE>=<NUM>` create 'NUM' containers. It can give problems with ports, we can solve it using a range on ports. For example: 3000-3010 instead of 3000.
 
 docker-compose.yml example:
 ```
@@ -92,7 +93,10 @@ services:
 	depends_on:
 		- <DEPENDENCY_NAME>
 	ports:
-		- "<HOST_PORT>:<CONTAINER_PORT>
+		- "<HOST_PORT>:<CONTAINER_PORT>"
+	volumes:
+		- <HOST_PATH>:<CONTAINER_PATH>
+		- <DONT_TOUCH_HOST_PATH>
 	
 <DEPENDENCY_NAME>:
     image: <IMAGE_NAME>
@@ -103,6 +107,11 @@ Are similar to the other docker commands:
 - `docker-compose ps`
 - `docker-compose logs <SERVICE_NAME>`
 - `docker-compose exec <SERVICE_NAME> <COMMAND>`
+
+### Other options
+- Like on Git, also exists an `.dockerignore` file.
+- Docker also has multi-stage builds.
+- We can use 'Docker in Docker' concept to run a Docker inside another Docker, for continuous integration for example.
 
 ## See also
 - [Docker Hub](https://hub.docker.com/)
