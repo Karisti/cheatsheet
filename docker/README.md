@@ -18,6 +18,7 @@
 - [Other options](#other-options)
 - [Resources](#resources)
 
+------------
 
 ### Installation
 - https://docs.docker.com/get-docker/
