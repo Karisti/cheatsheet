@@ -10,7 +10,7 @@
 - Hello world test: `docker run hello-world`
 
 <div align="right">
-  <small><a href="#Docker">🡡 Vuelta al Index</a></small>
+  <small><a href="#Docker">🡡 Go to Index</a></small>
 </div>
 
 ### Containers
