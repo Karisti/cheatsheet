@@ -154,4 +154,5 @@ Are similar to the other docker commands:
 - [Docker For The Absolute Beginner](https://www.kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
 - [Learn Docker in 12 Minutes 🐳](https://www.youtube.com/watch?v=YFl2mCHdv24)
 - [How to Docker](https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html)
-- [Vhat-docker](https://opensource.com/resources/what-docker)
+- [What-docker](https://opensource.com/resources/what-docker)
+- [Fundamentos de Docker - Platzi](https://platzi.com/clases/docker/)
