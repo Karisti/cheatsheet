@@ -13,6 +13,15 @@
   <small><a href="#Docker">🡡 Go to Index</a></small>
 </div>
 
+### What is Docker?
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and deploy it as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code.
+
+In a way, Docker is a bit like a virtual machine. But unlike a virtual machine, rather than creating a whole virtual operating system, Docker allows applications to use the same Linux kernel as the system that they're running on and only requires applications be shipped with things not already running on the host computer. This gives a significant performance boost and reduces the size of the application.
+
+<div align="right">
+  <small><a href="#Docker">🡡 Go to Index</a></small>
+</div>
+
 ### Containers
 A container runs its processes natively, just like any other process on the host machine, but cannot see processes outside the container. In the same way, you can only access the resources that have been assigned to you, it will not know if the host has more resources. For the file system, you can only see from its root, not above.
 
@@ -145,3 +154,4 @@ Are similar to the other docker commands:
 - [Docker For The Absolute Beginner](https://www.kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
 - [Learn Docker in 12 Minutes 🐳](https://www.youtube.com/watch?v=YFl2mCHdv24)
 - [How to Docker](https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html)
+- (https://opensource.com/resources/what-docker)
