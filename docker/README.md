@@ -7,13 +7,11 @@
 - https://docs.docker.com/get-docker/
 - `docker version`
 - `docker info`
+- Hello world test: `docker run hello-world`
 
 <div align="right">
   <small><a href="#Docker">🡡 Vuelta al Index</a></small>
 </div>
-
-### Hello world
-`docker run hello-world`
 
 ### Containers
 A container runs its processes natively, just like any other process on the host machine, but cannot see processes outside the container. In the same way, you can only access the resources that have been assigned to you, it will not know if the host has more resources. For the file system, you can only see from its root, not above.
