@@ -197,6 +197,7 @@ Are similar to the other docker commands:
 
 ### Resources
 - [Docker Hub](https://hub.docker.com/)
+- [Docker cheat sheet](https://www.docker.com/sites/default/files/d8/2019-09/docker-cheat-sheet.pdf)
 - [Docker For The Absolute Beginner](https://www.kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
 - [Learn Docker in 12 Minutes 🐳](https://www.youtube.com/watch?v=YFl2mCHdv24)
 - [How to Docker](https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html)
