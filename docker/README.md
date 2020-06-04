@@ -1,8 +1,22 @@
-## Docker
+## Docker<!-- omit in toc -->
+
+## Index<!-- omit in toc -->
+- [Comandos Git](#comandos-básicos)
+  - [Comandos Básicos](#flujos-de-trabajo)
+  - [Múltiples Branches](#múltiples-branches)
+  - [Repositorios Remotos (Github)](#repositorios-remotos-github)
+- [Configurar Git](#configurar-git)
+- [Estados de los archivos en Git](#estados-de-los-archivos-en-git)
+- [Utilidades](#utilidades)
+
 ### Installation
 - https://docs.docker.com/get-docker/
 - `docker version`
 - `docker info`
+
+<div align="right">
+  <small><a href="#Docker">🡡 Vuelta al Index</a></small>
+</div>
 
 ### Hello world
 `docker run hello-world`
@@ -134,6 +148,8 @@ Are similar to the other docker commands:
 - Docker also has multi-stage builds. You can use Docker to have a development build and a production build, run tests before putting it into production, etc.
 - We can use 'Docker in Docker' concept to run a Docker inside another Docker, for continuous integration for example. You can have a container that has the Docker client, and that speaks to the docker daemon of the host machine, but they won't be able to touch the rest of the machine.
 
-## See also
+## Resources
 - [Docker Hub](https://hub.docker.com/)
 - [Docker For The Absolute Beginner](https://www.kodekloud.com/p/docker-for-the-absolute-beginner-hands-on)
+- [Learn Docker in 12 Minutes 🐳](https://www.youtube.com/watch?v=YFl2mCHdv24)
+- [How to Docker](https://jonnylangefeld.github.io/learning/Docker/How%2Bto%2BDocker.html)
