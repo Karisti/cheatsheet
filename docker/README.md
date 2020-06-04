@@ -83,23 +83,23 @@ Images in Docker are built with layers. Each layer is one 'difference' with the 
 </div>
 
 ### Containers
-- `docker run <IMAGE_NAME>` runs container.
-	- `docker run -it <IMAGE_NAME>` interactive with my shell.
-	- `docker run --mount src=<NAME_VOLUME> dst=</PATH/TO/DEST> <IMAGE_NAME>` interactive with my shell.
+- `docker run <FLAGS> <IMAGE_NAME>` runs container.
+	- `-it` interactive with my shell.
+	- `--mount src=<NAME_VOLUME> dst=</PATH/TO/DEST>` to use bind mounts.
 	- `-p 8080:80` (publish) bound hosts port '8080' to containers port '80'.
-	- `docker run -d <IMAGE_NAME>` (detach) if this has output, don´t show me.
-	- `docker run <IMAGE_NAME> tail -f /dev/null` it execute the comand that we want, instead of default one. In this case tail -f "/dev/null" to get a infinite loop.
-		- Tail: returns to standard output the content of a file or directory.
-		- -f: follow. Return what there is, and stay waiting for changes to keep returning.
-		- /dev/null: everything that is carried here will disappear.
-	- `docker run --name <CONTAINER_NAME> <IMAGE_NAME>` corremos IMAGE_NAME con el nombre CONTAINER_NAME en vez de un nombre al azar.
+	- `-d` (detach) if this has output, don´t show me.
+	- `--name <CONTAINER_NAME>` we run IMAGE_NAME with the name CONTAINER_NAME instead of a random name.
 	- `--env <NAME>=<ENVIROMENT_VARIABLE>` assign environment variable.
-	- `docker run --rm <IMAGE_NAME>` deletes container when this ends.
-	
-- `docker ps` only shows running containers by default.
-	- `docker ps -a` shows all containers.
-	- `docker ps -aq` shows quiet containers.
-	- `docker ps -fea` view all system processes. By default the "root process" will have PID 1. When this term is the container it will be closed.
+	- `--rm` deletes container when this ends.
+- `docker run <IMAGE_NAME> tail -f /dev/null` it execute the comand that we want, instead of default one. In this case tail -f "/dev/null" to get a infinite loop.
+	- `Tail`: returns to standard output the content of a file or directory.
+	- `-f`: follow. Return what there is, and stay waiting for changes to keep returning.
+	- `/dev/null`: everything that is carried here will disappear.
+
+- `docker ps <FLAGS>` only shows running containers by default.
+	- `-a` shows all containers.
+	- `-aq` shows also quiet containers.
+	- `-fea` view all system processes. By default the "root process" will have PID 1. When this term is the container it will be closed.
 - `docker exec -it <CONTAINER_NAME> bash` executes command on running container.
 - `docker kill <CONTAINER_NAME>` to stop container.
 - `docker rm <CONTAINER_NAME>` to remove container.
