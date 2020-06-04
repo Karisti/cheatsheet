@@ -1,7 +1,23 @@
 ## Docker<!-- omit in toc -->
 
 ## Index<!-- omit in toc -->
-- [Installation](#comandos-básicos)
+- [Installation](#installation)
+- [What is Docker?](#what-is-docker)
+- [What are containers?](#what-are-containers)
+	- [Life cycle of a container](#life-cycle-of-a-container)
+- [Dockerfile](#dockerfile)
+- [Images](#images)
+- [Containers](#containers)
+	- [Networking](#networking)
+	- [Data](#data)
+		- [Bind mount](#bind-mount)
+		- [Volumes](#volumes)
+		- [tmpfs mount](#tmpfs-mount)
+- [Docker compose](#docker-compose)
+	- [Docker compose commands](#docker-compose-commands)
+- [Other options](#other-options)
+- [Resources](#resources)
+
 
 ### Installation
 - https://docs.docker.com/get-docker/
@@ -113,7 +129,7 @@ Each container with the original image (from 0) when we run it, so if we need da
 ##### Bind mount
 - `-v /Host/directory:Container/directory` makes data persistence between indicated host directory and the directory inside the container. Changes from one side are reflected in the other, so it can be insecure, as external processes can have access.
 
-##### Volume
+##### Volumes
 Stored place is managed by Docker, so external processes should not have access to this. Containers can create volumens by default.
 - `docker volume create <NAME_VOLUME>` creates a volume. We can use it when running, with --mount.
 - `docker volume ls` list volumes.
