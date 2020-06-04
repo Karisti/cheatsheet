@@ -44,7 +44,7 @@ A container runs its processes natively, just like any other process on the host
 
 First, we need a Dockerfile where we specify all the layers that the image is going to have when we build it. After that, we run the image to create de container.
 
-**Dockerfile --build--> image --run--> container**
+![Dockerfile --build--> image --run--> container](https://github.com/Karisti/cheatsheet/blob/master/docker/img/dockerfile.png)
 
 #### Life cycle of a container:
 Normally as soon as the ubuntu is executed it turns off, unless we are connected in interactive mode. Whenever a container is executed, normally the bash is executed and since it has no command to execute, it ends. We can change the command to execute.
