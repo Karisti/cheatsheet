@@ -1,13 +1,7 @@
 ## Docker<!-- omit in toc -->
 
 ## Index<!-- omit in toc -->
-- [Comandos Git](#comandos-básicos)
-  - [Comandos Básicos](#flujos-de-trabajo)
-  - [Múltiples Branches](#múltiples-branches)
-  - [Repositorios Remotos (Github)](#repositorios-remotos-github)
-- [Configurar Git](#configurar-git)
-- [Estados de los archivos en Git](#estados-de-los-archivos-en-git)
-- [Utilidades](#utilidades)
+- [Installation](#comandos-básicos)
 
 ### Installation
 - https://docs.docker.com/get-docker/
