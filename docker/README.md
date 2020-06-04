@@ -10,6 +10,9 @@
 ### Containers
 A container runs its processes natively, just like any other process on the host machine, but cannot see processes outside the container. In the same way, you can only access the resources that have been assigned to you, it will not know if the host has more resources. For the file system, you can only see from its root, not above.
 
+#### Life cycle of a container:
+Normally as soon as the ubuntu is executed it turns off, unless we are connected in interactive mode. Whenever a container is executed, normally the bash is executed and since it has no command to execute, it ends. We can change the command to execute.
+
 ### Basic commands
 - `docker run <IMAGE_NAME>` runs container.
 	- `docker run -it <IMAGE_NAME>` interactive with my shell.
@@ -17,13 +20,17 @@ A container runs its processes natively, just like any other process on the host
 	- `-p 8080:80` (publish) bound hosts port '8080' to containers port '80'.
 	- `docker run -d <IMAGE_NAME>` (detach) if this has output, don´t show me.
 	- `docker run <IMAGE_NAME> tail -f /dev/null` it execute the comand that we want, instead of default one. In this case tail -f "/dev/null" to get a infinite loop.
+		- Tail: returns to standard output the content of a file or directory.
+		- -f: follow. Return what there is, and stay waiting for changes to keep returning.
+		- /dev/null: everything that is carried here will disappear.
 	- `docker run --name <CONTAINER_NAME> <IMAGE_NAME>` corremos IMAGE_NAME con el nombre CONTAINER_NAME en vez de un nombre al azar.
-	- `-env <NAME>=<ENVIROMENT_VARIABLE>` assign environment variable.
+	- `--env <NAME>=<ENVIROMENT_VARIABLE>` assign environment variable.
 	- `docker run --rm <IMAGE_NAME>` deletes container when this ends.
 	
 - `docker ps` only shows running containers by default.
 	- `docker ps -a` shows all containers.
 	- `docker ps -aq` shows quiet containers.
+	- `docker ps -fea` view all system processes. By default the "root process" will have PID 1. When this term is the container it will be closed.
 - `docker exec -it <CONTAINER_NAME> bash` executes command on running container.
 - `docker kill <CONTAINER_NAME>` to stop container.
 - `docker rm <CONTAINER_NAME>` to remove container.
@@ -34,11 +41,21 @@ A container runs its processes natively, just like any other process on the host
 - `docker inspect -f '{{ json .Config.Env }}' <CONTAINER_ID or CONTAINER_NAME>` filtramos el resultado de inspect para obtener un valor concreto. En este caso el path del contenedor.
 
 ### Networking
+If two containers are connected to the same network, they can see each other using the name of the container as hostname.
+
+#### Types of network
 Three types of networks by default: bridge, host, none.
+- **Bridge**: default network, or bridged network, was used with the 'link' instruction, which allowed to link containers across the network. However this network is deprecated.
+- **Host**: Use this interface with caution. Allows the container to use the default network of the host machine. It is sensible that if the container opens any port, this is replicated on the host machine,  generating possible vulnerabilities.
+- **None**: it is similar to /dev/null or black hole on unix systems. In this case it allows us to specify that the container has no exit or permission to access or be accessed by network.
+
+#### Commands
 - `docker network ls` list networks.
-- `docker network create --attachable <NETWORK_NAME>` list networks. Attachable: we allow other containers connection on the future.
+- `docker network create --attachable <NETWORK_NAME>` create network.
+	- `--attachable` we allow other containers connection on the future.
 - `docker network connect <NETWORK_NAME> <CONTAINER_NAME>` connects container to given network.
 - `docker network inspect <NETWORK_NAME>` all the information about the network.
+
 
 ### Data
 Each container with the original image (from 0) when we run it, so if we need data persistence, we have to manage it. We need to mount directory we want from the host on the desired directory of the container.
@@ -58,14 +75,17 @@ Temporal file system. It works on memory, so when it stops its deleted. Very use
 Images in Docker are built with layers. Each layer is one 'difference' with the previus one on the files.
 - `docker pull <IMAGE_NAME>` or `docker pull <IMAGE_NAME>:<VERSION>` pull image from Docker repository.
 - `docker image ls` list images.
-- `docker build -t <TAG_NAME> <PATH>` to build image from Dockerfile. We indicate the tag with -t. The Docker daemon can use the files only from PATH on build time.
+- `docker image rm <IMAGE_NAME>` remove image.
+- `docker build -t <TAG_NAME> <PATH_SRCS_FOR_BUILD_TIME>` to build image from Dockerfile. We indicate the tag with -t. The Docker daemon can use the files only from PATH on build time.
 - `docker tag <PREVIOUS_TAG> <MY_USER>/<NEW TAG>` to rename image tag, so we can push to our Docker repository.
 - `docker push <IMAGE_NAME>` or `docker push <IMAGE_NAME>:<VERSION>` to push image from to Docker repository.
-- `docker history <IMAGE_NAME>` to see how image was created.
+- `docker history <IMAGE_NAME> OR <TAG_NAME>` to see how image was created.
 	- `-- no-trunc` to avoid truncating output.
 - `dive <IMAGE_NAME>` we can use Dive to see history better (https://github.com/wagoodman/dive).
 
 ### Dockerfile
+**Dockerfile --build--> image --run--> container**
+
 We can specify how we want to be our image in this Dockerfile.
 - `FROM <BASE_IMAGE>:<VERSION>` we indicate which base image to use.
 - `RUN <COMMAND TO EXECUTE>` to execute commands when building the image.
@@ -75,11 +95,12 @@ We can specify how we want to be our image in this Dockerfile.
 - `CMD ["<COMMAND>", "<COMMAND>"]` default command that will run if it is not specified.
 
 ### Docker compose
-Describe declaratively the structure of our application. It uses compose files in yml format. It creates a default network for all the services.
+Describe declaratively the structure of our application to easily configure the whole image. It uses compose files in yml format. It creates a default network for all the services.
 
-`docker-compose up` to run.
-`docker-compose down` to clean.
-`docker-compose scale <SERVICE>=<NUM>` create 'NUM' containers. It can give problems with ports, we can solve it using a range on ports. For example: 3000-3010 instead of 3000.
+- `docker-compose up` to run.
+- `docker-compose down` to clean.
+- docker-compose ps` to clean.
+- `docker-compose scale <SERVICE>=<NUM>` create 'NUM' containers. It can give problems with ports, we can solve it using a range on ports. For example: 3000-3010 instead of 3000.
 
 docker-compose.yml example:
 ```
@@ -109,9 +130,9 @@ Are similar to the other docker commands:
 - `docker-compose exec <SERVICE_NAME> <COMMAND>`
 
 ### Other options
-- Like on Git, also exists an `.dockerignore` file.
-- Docker also has multi-stage builds.
-- We can use 'Docker in Docker' concept to run a Docker inside another Docker, for continuous integration for example.
+- Like on Git, also exists an `.dockerignore` file, to specify files and directories that we don't want to build.
+- Docker also has multi-stage builds. You can use Docker to have a development build and a production build, run tests before putting it into production, etc.
+- We can use 'Docker in Docker' concept to run a Docker inside another Docker, for continuous integration for example. You can have a container that has the Docker client, and that speaks to the docker daemon of the host machine, but they won't be able to touch the rest of the machine.
 
 ## See also
 - [Docker Hub](https://hub.docker.com/)
