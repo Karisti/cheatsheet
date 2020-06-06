@@ -12,6 +12,26 @@
     ng serve --open
 ```
 
+### Directivas
+#### ngModel
+Lo que nosotros pongamos en el input text se verá reflejado en la variable 'title'.
+```
+<input type="text" [(ngModel)]="title">
+```
+#### *ngIf
+```
+<div *ngIf="title === 'kepa'">
+	hello
+</div>
+```
+#### *ngFor
+```
+<li *ngFor="let name of items; index as i">
+	{{ name }} {{ i }}
+</li>
+```
+
+
 ### Estructura del proyecto
   - `node_modules` librerías.
   - `package.json` dependencias.
@@ -98,28 +118,6 @@ ng generate component {nombreComponente}
         friend: boolean;
         uid: any;
       }
-```
-
-### Directivas
-#### ngModel
-Lo que nosotros pongamos en el input text se verá reflejado en la variable 'title'.
-```
-<input type="text" [(ngModel)]="title">
-```
-#### *ngFor
-```
-<p *ngFor="let friend of friends; let i = index">
-	{{i}}. {{friend.nick}} - {{friend.email}}
-</p>
-```
-#### *ngIf
-En este caso se utiliza la etiqueda `ng-container` para poder usar varias directivas. Esto es transparente para el usuario.
-```
-<ng-container *ngFor="let user of friends; let i = index">
-	<p *ngIf="user.friend">
-		{{i}}. {{user.nick}} - {{user.email}}
-	</p>
-</ng-container>
 ```
 
 ### Services
