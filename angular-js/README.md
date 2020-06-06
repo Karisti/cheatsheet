@@ -100,8 +100,13 @@ ng generate component {nombreComponente}
       }
 ```
 
-  ### Directivas
-  #### *ngFor
+### Directivas
+#### ngModel
+Lo que nosotros pongamos en el input text se verá reflejado en la variable 'title'.
+```
+<input type="text" [(ngModel)]="title">
+```
+#### *ngFor
 ```
 <p *ngFor="let friend of friends; let i = index">
 	{{i}}. {{friend.nick}} - {{friend.email}}
