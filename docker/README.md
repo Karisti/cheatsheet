@@ -187,6 +187,12 @@ Are similar to the other docker commands:
 </div>
 
 ### Other options
+- `docker stats` to see use of resources.
+- `docker system prune` helps to clean unused resources.
+- In Dockerfile `ADD <URL> <PATH>` download file from url to path. Is not necesary to have 'wget'.
+- `docker logs --tail=10 -t <CONTAINER_ID>` see last 10 logs of container, with timestamp.
+- `docker system prune` helps to clean unused resources.
+- `docker run -it --entrypoint=bash` to, for example, initiate a nginx container but execute bash. With this we can see errors to fix them for example.
 - Like on Git, also exists an `.dockerignore` file, to specify files and directories that we don't want to build.
 - Docker also has multi-stage builds. You can use Docker to have a development build and a production build, run tests before putting it into production, etc.
 - We can use 'Docker in Docker' concept to run a Docker inside another Docker, for continuous integration for example. You can have a container that has the Docker client, and that speaks to the docker daemon of the host machine, but they won't be able to touch the rest of the machine.
