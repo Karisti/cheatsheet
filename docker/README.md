@@ -73,6 +73,7 @@ We can specify how we want to be our image in this Dockerfile.
 ### Images
 Images in Docker are built with layers. Each layer is one 'difference' with the previus one on the files.
 - `docker build -t <TAG_NAME> <PATH_SRCS_FOR_BUILD_TIME>` to build image from Dockerfile. We indicate the tag with -t. The Docker daemon can use the files only from PATH on build time.
+	- `--no-cache` for clean build.
 - `docker pull <IMAGE_NAME>` or `docker pull <IMAGE_NAME>:<VERSION>` pull image from Docker repository.
 - `docker image ls` list images.
 - `docker image rm <IMAGE_NAME>` remove image.
