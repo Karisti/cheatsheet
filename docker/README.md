@@ -64,7 +64,7 @@ We can specify how we want to be our image in this Dockerfile.
 - `COPY ["<BUILD_CONTEXT_PATH>", "<DEST_PATH>"]` to copy files from the build context to a dest on the image.
 - `WORKDIR <DIRECTORY>` change working directory.
 - `EXPOSE <PORT>` to expose port.
-- `CMD ["<COMMAND>", "<COMMAND>"]` default command that will run if it is not specified.
+- `CMD ["<COMMAND>", "<COMMAND>"]` default command that will run if it is not specified. There can be ONLY ONE. If various, only the last is taken into account.
 
 <div align="right">
   <small><a href="#Docker">🡡 Go to Index</a></small>
