@@ -5,6 +5,7 @@
   - [Comandos Básicos](#flujos-de-trabajo)
   - [Múltiples Branches](#múltiples-branches)
   - [Repositorios Remotos (Github)](#repositorios-remotos-github)
+  - [Submódulos](#submódulos)
 - [Configurar Git](#configurar-git)
 - [Estados de los archivos en Git](#estados-de-los-archivos-en-git)
 - [Utilidades](#utilidades)
@@ -104,18 +105,6 @@ Si se desea eliminar el repositorio, solo hay que eliminar la carpeta oculta .gi
   <small><a href="#git--github">🡡 Vuelta al Index</a></small>
 </div>
 
-### Submódulos
-
-* `git submodule add <PATH_REMOTO> <NOMBRE_CARPETA>` añadir submódulo.
-* `git clone --recursive <PATH_REMOTO> <NOMBRE_CARPETA>` hacer clone bajando submódulos.
-* `git pull --recurse-submodules` hacer pull bajando submódulos.
-* `git rm <NOMBRE>` borrar submódulo.
-* `git submodule update --remote` actualizará el submódulo al HEAD del remoto.
- 
-<div align="right">
-  <small><a href="#git--github">🡡 Vuelta al Index</a></small>
-</div>
-
 ### Repositorios Remotos (Github)
 
 * `git clone [URL]` nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git.
@@ -136,6 +125,17 @@ Si se desea eliminar el repositorio, solo hay que eliminar la carpeta oculta .gi
   <small><a href="#git--github">🡡 Vuelta al Index</a></small>
 </div>
 
+### Submódulos
+
+* `git submodule add <PATH_REMOTO> <NOMBRE_CARPETA>` añadir submódulo.
+* `git clone --recursive <PATH_REMOTO> <NOMBRE_CARPETA>` hacer clone bajando submódulos.
+* `git pull --recurse-submodules` hacer pull bajando submódulos.
+* `git rm <NOMBRE>` borrar submódulo.
+* `git submodule update --remote` actualizará el submódulo al HEAD del remoto.
+ 
+<div align="right">
+  <small><a href="#git--github">🡡 Vuelta al Index</a></small>
+</div>
 
 ## Configurar Git
 - `git config`
